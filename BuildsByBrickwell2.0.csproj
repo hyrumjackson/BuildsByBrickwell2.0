@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-BuildsByBrickwell2._0-b133b157-0563-4d93-91b7-22194fed7a84</UserSecretsId>
+    <RootNamespace>BuildsByBrickwell2._0</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\ServiceDependencies\BuildsByBrickwell - Web Deploy\profile.arm.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\BuildsByBrickwell - Web Deploy.pubxml.user" />
+    <None Include="Properties\serviceDependencies.local.json.user" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4" />
+  </ItemGroup>
+
+</Project>
