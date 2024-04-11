@@ -5,7 +5,7 @@ using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-var connectionString = builder.Configuration.GetConnectionString("MyDatabase");
+var connectionString = builder.Configuration.GetConnectionString("IntexConnection");
 var dbPassword = builder.Configuration["DbPassword"];
 
 connectionString += $"Password={dbPassword};";
@@ -16,7 +16,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<IntexProjectContext>(options =>
 {
     options.UseSqlServer(
-        builder.Configuration.GetConnectionString("IntexConnection"),
+        connectionString,
         sqlServerOptionsAction: sqlOptions =>
         {
             sqlOptions.EnableRetryOnFailure(
